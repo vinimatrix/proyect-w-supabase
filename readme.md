@@ -27,7 +27,8 @@ este seria el ejemplo de la estructura
 
 
 ## adicional puedes meter el front en el mismo contenedor (recomendado separarlos)
-''' frontend:
+''' 
+    frontend:
             build: ./frontend
             container_name: frontend_app
             depends_on:
