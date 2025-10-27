@@ -24,3 +24,23 @@ este seria el ejemplo de la estructura
 
 ## inicias los contenedores
 - docker-compose up -d
+
+
+## adicional puedes meter el front en el mismo contenedor (recomendado separarlos)
+frontend:
+    build: ./frontend
+    container_name: frontend_app
+    depends_on:
+      - api
+      - auth
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL}
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+    networks:
+      - supabase_net
+
+networks:
+  supabase_net:
+    driver: bridge
