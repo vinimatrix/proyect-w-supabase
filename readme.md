@@ -17,7 +17,8 @@ este seria el ejemplo de la estructura
 
 ## clonas supabase
 - git clone --depth 1 https://github.com/supabase/supabase
-## vas a la carpeta y copias el .env-example
+## vas a la carpeta de supabase y copias el .env-example
+- cd supabase/docker
 - windows: COPY .env-example .env / linux: cp env-example .env
 - cambias lo necesario
 
